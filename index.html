@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join the waitlist · AquaticsFlow</title>
+<meta name="description" content="AquaticsFlow opens to clubs soon. Join the waitlist for first access and a founding price.">
+<link rel="canonical" href="https://waitlist.aquaticsflow.com/">
+<meta property="og:title" content="Join the waitlist · AquaticsFlow">
+<meta property="og:description" content="AquaticsFlow opens to clubs soon. Join the waitlist for first access and a founding price.">
+<meta property="og:url" content="https://waitlist.aquaticsflow.com/">
+<meta property="og:site_name" content="AquaticsFlow">
+<meta property="og:image" content="https://waitlist.aquaticsflow.com/assets/icon-192.png">
+<meta name="theme-color" content="#030b14">
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preload" href="/assets/onest.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Onest"; src: url("/assets/onest.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+:root {
+  --bg: #030b14; --deep: #061a2e; --panel: rgba(12, 34, 56, 0.55); --panel-bd: rgba(148, 212, 255, 0.12);
+  --ink: #eef6fb; --ink2: rgba(222, 238, 250, 0.74); --ink3: rgba(222, 238, 250, 0.52);
+  --brand: #2038f8; --brand-hi: #4d62ff; --cyan: #7fd8ff; --err: #ffb4a8;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--ink); }
+body {
+  font-family: "Onest", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased; min-height: 100vh;
+  background:
+    radial-gradient(60% 40% at 85% 0%, rgba(32, 56, 248, 0.22), transparent 70%),
+    radial-gradient(50% 35% at 0% 100%, rgba(127, 216, 255, 0.08), transparent 70%),
+    repeating-linear-gradient(to bottom, transparent 0 119px, rgba(148, 212, 255, 0.05) 119px 121px),
+    var(--bg);
+  padding-inline: 16px;
+}
+a { color: inherit; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
+header img { height: 30px; width: auto; display: block; }
+.langs { display: flex; gap: 2px; font-size: 13px; font-weight: 700; }
+.langs button { all: unset; cursor: pointer; padding: 10px 9px; color: var(--ink3); border-radius: 8px; }
+.langs button[aria-pressed="true"] { color: var(--ink); }
+.langs button:focus-visible, :focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); }
+.display { font-weight: 800; letter-spacing: -0.035em; line-height: 0.98; text-wrap: balance; }
+.body { color: var(--ink2); text-wrap: pretty; }
+.panel { background: var(--panel); border: 1px solid var(--panel-bd); border-radius: 28px; backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+footer { color: var(--ink3); font-size: 13px; padding-block: 40px 32px; display: flex; flex-wrap: wrap; gap: 8px 18px; }
+
+.grid { display: grid; gap: 32px; padding-block: 28px 8px; grid-template-areas: "intro" "form" "perks"; }
+/* On a phone the form comes right after the headline: people arrive from a video to sign up. */
+@media (min-width: 960px) { .grid { grid-template-columns: 1fr 1.15fr; grid-template-areas: "intro form" "perks form"; column-gap: 64px; row-gap: 0; padding-top: 56px; align-items: start; } }
+.a-intro { grid-area: intro; } .a-form { grid-area: form; } .a-perks { grid-area: perks; }
+h1 { font-size: clamp(40px, 7vw, 60px); margin: 12px 0 0; max-width: 16ch; }
+.intro { font-size: 17px; line-height: 1.6; margin-top: 20px; max-width: 50ch; }
+.perks { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-direction: column; gap: 20px; }
+.perks li { display: flex; gap: 16px; }
+.tick { flex: none; width: 36px; height: 36px; border-radius: 12px; display: grid; place-items: center; background: rgba(127, 216, 255, 0.1); color: var(--cyan); }
+.perks h2 { font-size: 17px; font-weight: 800; margin: 0; }
+.perks p { font-size: 15px; line-height: 1.6; margin: 4px 0 0; }
+form { display: grid; gap: 16px; padding: 24px; }
+@media (min-width: 768px) { form { grid-template-columns: 1fr 1fr; padding: 28px; } .span2 { grid-column: span 2; } }
+label.f { display: block; font-size: 13.5px; font-weight: 600; color: var(--ink2); }
+.opt { font-weight: 400; color: var(--ink3); }
+input[type=text], input[type=email], select {
+  margin-top: 6px; width: 100%; border-radius: 12px; border: 1px solid var(--panel-bd); background: rgba(6, 26, 46, 0.6);
+  padding: 12px 14px; font: inherit; font-size: 15px; color: #fff; outline: none; min-height: 48px;
+}
+select { appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--ink3) 50%), linear-gradient(135deg, var(--ink3) 50%, transparent 50%);
+  background-position: calc(100% - 20px) 21px, calc(100% - 15px) 21px; background-size: 5px 5px; background-repeat: no-repeat; padding-right: 36px; }
+input:focus, select:focus { border-color: var(--brand-hi); }
+.consent { display: flex; align-items: flex-start; gap: 12px; font-size: 14px; line-height: 1.4; color: var(--ink2); }
+.consent input { margin-top: 2px; width: 20px; height: 20px; flex: none; accent-color: var(--brand); }
+.err { color: var(--err); font-size: 14px; font-weight: 600; margin: 0; }
+button.go { all: unset; box-sizing: border-box; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 0 24px; border-radius: 999px; background: var(--brand); color: #fff; font-weight: 700; font-size: 15.5px;
+  box-shadow: 0 10px 30px -10px rgba(32, 56, 248, 0.8), inset 0 1px 0 rgba(255, 255, 255, 0.18); text-align: center; }
+button.go:hover { background: var(--brand-hi); }
+button.go[disabled] { opacity: 0.7; cursor: progress; }
+.spin { width: 16px; height: 16px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.4); border-top-color: #fff; animation: s 0.8s linear infinite; display: none; }
+button.go[disabled] .spin { display: inline-block; }
+@keyframes s { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spin { animation-duration: 3s; } }
+.trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.thanks { padding: 28px; }
+.thanks h2 { font-size: 24px; font-weight: 800; margin: 0; }
+.thanks p { font-size: 15.5px; line-height: 1.6; margin: 8px 0 0; }
+.note { font-size: 13.5px; line-height: 1.6; margin: 16px 4px 0; }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a href="https://aquaticsflow.com" aria-label="AquaticsFlow"><img src="/assets/wordmark.png" alt="AquaticsFlow" width="167" height="30"></a>
+  <nav class="langs" aria-label="Language"><button type="button" data-lang="en">EN</button><button type="button" data-lang="pt">PT</button><button type="button" data-lang="fr">FR</button></nav>
+</header>
+<main class="wrap grid">
+  <section class="a-intro">
+    <div class="eyebrow" data-t="wl.eyebrow"></div>
+    <h1 class="display" data-t="wl.title"></h1>
+    <p class="body intro" data-t="wl.body"></p>
+  </section>
+  <section class="a-perks">
+    <ul class="perks">
+      <li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h2 data-t="wl.perk1.title"></h2><p class="body" data-t="wl.perk1.body"></p></div></li><li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h2 data-t="wl.perk2.title"></h2><p class="body" data-t="wl.perk2.body"></p></div></li><li><span class="tick" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><h2 data-t="wl.perk3.title"></h2><p class="body" data-t="wl.perk3.body"></p></div></li>
+    </ul>
+  </section>
+  <section class="a-form">
+    <form id="wl" class="panel" novalidate>
+      <div class="trap" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <label class="f" for="wl-name"><span data-t="wl.name"></span>
+        <input id="wl-name" name="name" type="text" required maxlength="120" autocomplete="name"></label>
+      <label class="f" for="wl-email"><span data-t="wl.email"></span>
+        <input id="wl-email" name="email" type="email" required maxlength="254" autocomplete="email"></label>
+      <label class="f" for="wl-role"><span data-t="wl.role"></span>
+        <select id="wl-role" name="role" required >
+  <option value="" disabled selected data-t="wl.choose"></option>
+  <option value="coach" data-t="wl.role.coach"></option><option value="club_admin" data-t="wl.role.club_admin"></option><option value="parent" data-t="wl.role.parent"></option><option value="swimmer" data-t="wl.role.swimmer"></option><option value="other" data-t="wl.role.other"></option>
+</select></label>
+      <label class="f" for="wl-club"><span data-t="wl.club"></span><span class="opt" data-t="wl.optional" data-pre=" · "></span>
+        <input id="wl-club" name="club" type="text" maxlength="120" autocomplete="organization"></label>
+      <label class="f" for="wl-country"><span data-t="wl.country"></span><span class="opt" data-t="wl.optional" data-pre=" · "></span>
+        <select id="wl-country" name="country"><option value="" selected data-t="wl.choose"></option>
+        <option value="Afghanistan">Afghanistan</option><option value="Åland Islands">Åland Islands</option><option value="Albania">Albania</option><option value="Algeria">Algeria</option><option value="American Samoa">American Samoa</option><option value="Andorra">Andorra</option><option value="Angola">Angola</option><option value="Anguilla">Anguilla</option><option value="Antarctica">Antarctica</option><option value="Antigua &amp; Barbuda">Antigua &amp; Barbuda</option><option value="Argentina">Argentina</option><option value="Armenia">Armenia</option><option value="Aruba">Aruba</option><option value="Australia">Australia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Bahamas">Bahamas</option><option value="Bahrain">Bahrain</option><option value="Bangladesh">Bangladesh</option><option value="Barbados">Barbados</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Belize">Belize</option><option value="Benin">Benin</option><option value="Bermuda">Bermuda</option><option value="Bhutan">Bhutan</option><option value="Bolivia">Bolivia</option><option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina</option><option value="Botswana">Botswana</option><option value="Bouvet Island">Bouvet Island</option><option value="Brazil">Brazil</option><option value="British Indian Ocean Territory">British Indian Ocean Territory</option><option value="British Virgin Islands">British Virgin Islands</option><option value="Brunei">Brunei</option><option value="Bulgaria">Bulgaria</option><option value="Burkina Faso">Burkina Faso</option><option value="Burundi">Burundi</option><option value="Cambodia">Cambodia</option><option value="Cameroon">Cameroon</option><option value="Canada">Canada</option><option value="Cape Verde">Cape Verde</option><option value="Caribbean Netherlands">Caribbean Netherlands</option><option value="Cayman Islands">Cayman Islands</option><option value="Central African Republic">Central African Republic</option><option value="Chad">Chad</option><option value="Chile">Chile</option><option value="China">China</option><option value="Christmas Island">Christmas Island</option><option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option><option value="Colombia">Colombia</option><option value="Comoros">Comoros</option><option value="Congo - Brazzaville">Congo - Brazzaville</option><option value="Congo - Kinshasa">Congo - Kinshasa</option><option value="Cook Islands">Cook Islands</option><option value="Costa Rica">Costa Rica</option><option value="Côte d’Ivoire">Côte d’Ivoire</option><option value="Croatia">Croatia</option><option value="Cuba">Cuba</option><option value="Curaçao">Curaçao</option><option value="Cyprus">Cyprus</option><option value="Czechia">Czechia</option><option value="Denmark">Denmark</option><option value="Djibouti">Djibouti</option><option value="Dominica">Dominica</option><option value="Dominican Republic">Dominican Republic</option><option value="Ecuador">Ecuador</option><option value="Egypt">Egypt</option><option value="El Salvador">El Salvador</option><option value="Equatorial Guinea">Equatorial Guinea</option><option value="Eritrea">Eritrea</option><option value="Estonia">Estonia</option><option value="Eswatini">Eswatini</option><option value="Ethiopia">Ethiopia</option><option value="Falkland Islands">Falkland Islands</option><option value="Faroe Islands">Faroe Islands</option><option value="Fiji">Fiji</option><option value="Finland">Finland</option><option value="France">France</option><option value="French Guiana">French Guiana</option><option value="French Polynesia">French Polynesia</option><option value="French Southern Territories">French Southern Territories</option><option value="Gabon">Gabon</option><option value="Gambia">Gambia</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Ghana">Ghana</option><option value="Gibraltar">Gibraltar</option><option value="Greece">Greece</option><option value="Greenland">Greenland</option><option value="Grenada">Grenada</option><option value="Guadeloupe">Guadeloupe</option><option value="Guam">Guam</option><option value="Guatemala">Guatemala</option><option value="Guernsey">Guernsey</option><option value="Guinea">Guinea</option><option value="Guinea-Bissau">Guinea-Bissau</option><option value="Guyana">Guyana</option><option value="Haiti">Haiti</option><option value="Heard &amp; McDonald Islands">Heard &amp; McDonald Islands</option><option value="Honduras">Honduras</option><option value="Hong Kong SAR China">Hong Kong SAR China</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="India">India</option><option value="Indonesia">Indonesia</option><option value="Iran">Iran</option><option value="Iraq">Iraq</option><option value="Ireland">Ireland</option><option value="Isle of Man">Isle of Man</option><option value="Israel">Israel</option><option value="Italy">Italy</option><option value="Jamaica">Jamaica</option><option value="Japan">Japan</option><option value="Jersey">Jersey</option><option value="Jordan">Jordan</option><option value="Kazakhstan">Kazakhstan</option><option value="Kenya">Kenya</option><option value="Kiribati">Kiribati</option><option value="Kuwait">Kuwait</option><option value="Kyrgyzstan">Kyrgyzstan</option><option value="Laos">Laos</option><option value="Latvia">Latvia</option><option value="Lebanon">Lebanon</option><option value="Lesotho">Lesotho</option><option value="Liberia">Liberia</option><option value="Libya">Libya</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macao SAR China">Macao SAR China</option><option value="Madagascar">Madagascar</option><option value="Malawi">Malawi</option><option value="Malaysia">Malaysia</option><option value="Maldives">Maldives</option><option value="Mali">Mali</option><option value="Malta">Malta</option><option value="Marshall Islands">Marshall Islands</option><option value="Martinique">Martinique</option><option value="Mauritania">Mauritania</option><option value="Mauritius">Mauritius</option><option value="Mayotte">Mayotte</option><option value="Mexico">Mexico</option><option value="Micronesia">Micronesia</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Mongolia">Mongolia</option><option value="Montenegro">Montenegro</option><option value="Montserrat">Montserrat</option><option value="Morocco">Morocco</option><option value="Mozambique">Mozambique</option><option value="Myanmar (Burma)">Myanmar (Burma)</option><option value="Namibia">Namibia</option><option value="Nauru">Nauru</option><option value="Nepal">Nepal</option><option value="Netherlands">Netherlands</option><option value="New Caledonia">New Caledonia</option><option value="New Zealand">New Zealand</option><option value="Nicaragua">Nicaragua</option><option value="Niger">Niger</option><option value="Nigeria">Nigeria</option><option value="Niue">Niue</option><option value="Norfolk Island">Norfolk Island</option><option value="North Korea">North Korea</option><option value="North Macedonia">North Macedonia</option><option value="Northern Mariana Islands">Northern Mariana Islands</option><option value="Norway">Norway</option><option value="Oman">Oman</option><option value="Pakistan">Pakistan</option><option value="Palau">Palau</option><option value="Palestinian Territories">Palestinian Territories</option><option value="Panama">Panama</option><option value="Papua New Guinea">Papua New Guinea</option><option value="Paraguay">Paraguay</option><option value="Peru">Peru</option><option value="Philippines">Philippines</option><option value="Pitcairn Islands">Pitcairn Islands</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Puerto Rico">Puerto Rico</option><option value="Qatar">Qatar</option><option value="Réunion">Réunion</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="Rwanda">Rwanda</option><option value="Samoa">Samoa</option><option value="San Marino">San Marino</option><option value="São Tomé &amp; Príncipe">São Tomé &amp; Príncipe</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Senegal">Senegal</option><option value="Serbia">Serbia</option><option value="Seychelles">Seychelles</option><option value="Sierra Leone">Sierra Leone</option><option value="Singapore">Singapore</option><option value="Sint Maarten">Sint Maarten</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Solomon Islands">Solomon Islands</option><option value="Somalia">Somalia</option><option value="South Africa">South Africa</option><option value="South Georgia &amp; South Sandwich Islands">South Georgia &amp; South Sandwich Islands</option><option value="South Korea">South Korea</option><option value="South Sudan">South Sudan</option><option value="Spain">Spain</option><option value="Sri Lanka">Sri Lanka</option><option value="St. Barthélemy">St. Barthélemy</option><option value="St. Helena">St. Helena</option><option value="St. Kitts &amp; Nevis">St. Kitts &amp; Nevis</option><option value="St. Lucia">St. Lucia</option><option value="St. Martin">St. Martin</option><option value="St. Pierre &amp; Miquelon">St. Pierre &amp; Miquelon</option><option value="St. Vincent &amp; Grenadines">St. Vincent &amp; Grenadines</option><option value="Sudan">Sudan</option><option value="Suriname">Suriname</option><option value="Svalbard &amp; Jan Mayen">Svalbard &amp; Jan Mayen</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Syria">Syria</option><option value="Taiwan">Taiwan</option><option value="Tajikistan">Tajikistan</option><option value="Tanzania">Tanzania</option><option value="Thailand">Thailand</option><option value="Timor-Leste">Timor-Leste</option><option value="Togo">Togo</option><option value="Tokelau">Tokelau</option><option value="Tonga">Tonga</option><option value="Trinidad &amp; Tobago">Trinidad &amp; Tobago</option><option value="Tunisia">Tunisia</option><option value="Türkiye">Türkiye</option><option value="Turkmenistan">Turkmenistan</option><option value="Turks &amp; Caicos Islands">Turks &amp; Caicos Islands</option><option value="Tuvalu">Tuvalu</option><option value="U.S. Outlying Islands">U.S. Outlying Islands</option><option value="U.S. Virgin Islands">U.S. Virgin Islands</option><option value="Uganda">Uganda</option><option value="Ukraine">Ukraine</option><option value="United Arab Emirates">United Arab Emirates</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="Uruguay">Uruguay</option><option value="Uzbekistan">Uzbekistan</option><option value="Vanuatu">Vanuatu</option><option value="Vatican City">Vatican City</option><option value="Venezuela">Venezuela</option><option value="Vietnam">Vietnam</option><option value="Wallis &amp; Futuna">Wallis &amp; Futuna</option><option value="Western Sahara">Western Sahara</option><option value="Yemen">Yemen</option><option value="Zambia">Zambia</option><option value="Zimbabwe">Zimbabwe</option></select></label>
+      <label class="f" for="wl-band"><span data-t="wl.band"></span><span class="opt" data-t="wl.optional" data-pre=" · "></span>
+        <select id="wl-band" name="band"  >
+  <option value=""  selected data-t="wl.choose"></option>
+  <option value="50" data-t="wl.band.50"></option><option value="100" data-t="wl.band.100"></option><option value="200" data-t="wl.band.200"></option><option value="400" data-t="wl.band.400"></option><option value="more" data-t="wl.band.more"></option>
+</select></label>
+      <label class="f span2" for="wl-tool"><span data-t="wl.tool"></span><span class="opt" data-t="wl.optional" data-pre=" · "></span>
+        <select id="wl-tool" name="tool"  >
+  <option value=""  selected data-t="wl.choose"></option>
+  <option value="hytek" data-t="wl.tool.hytek"></option><option value="teamunify" data-t="wl.tool.teamunify"></option><option value="swimtopia" data-t="wl.tool.swimtopia"></option><option value="spreadsheet" data-t="wl.tool.spreadsheet"></option><option value="paper" data-t="wl.tool.paper"></option><option value="other" data-t="wl.tool.other"></option>
+</select></label>
+      <label class="consent span2" for="wl-consent"><input id="wl-consent" name="consent" type="checkbox" required><span data-t="wl.consent"></span></label>
+      <p class="err span2" id="wl-err" role="alert" hidden></p>
+      <button type="submit" class="go span2"><span class="spin" aria-hidden="true"></span><span data-t="nav.waitlist"></span></button>
+    </form>
+    <div class="panel thanks" id="wl-thanks" role="status" hidden>
+      <h2 data-t="wl.thanksTitle"></h2><p class="body" data-t="wl.thanksBody"></p>
+    </div>
+    <p class="body note"><span data-t="wl.privacyNote"></span> <a href="/privacy/" data-t="wl.privacyLink"></a></p>
+  </section>
+</main>
+<footer class="wrap"><span>© AquaticsFlow</span><a href="https://aquaticsflow.com">aquaticsflow.com</a><a href="/privacy/" data-t="wl.privacyLink"></a><a href="mailto:hello@aquaticsflow.com">hello@aquaticsflow.com</a></footer>
+<script>
+const T = {"en":{"wl.metaTitle":"Join the waitlist","wl.metaDesc":"AquaticsFlow opens to clubs soon. Join the waitlist for first access and a founding price.","wl.eyebrow":"Opening soon","wl.title":"Be one of the first clubs on AquaticsFlow","wl.body":"We're opening to clubs in a few weeks. Join the list and we'll let you in first, with a founding price, and ask what you'd like built next.","wl.perk1.title":"First in on launch day","wl.perk1.body":"You get your invitation before anyone else, with your 30-day free trial ready to start.","wl.perk2.title":"A founding price","wl.perk2.body":"Clubs on the list get a lower price for their first year. We'll send the details with your invitation.","wl.perk3.title":"A say in what's next","wl.perk3.body":"Founding clubs tell us what they need, and it shapes what we build.","wl.name":"Your name","wl.email":"Email","wl.role":"You are a","wl.club":"Club","wl.country":"Country","wl.band":"Active swimmers","wl.tool":"What do you use today?","wl.optional":"optional","wl.choose":"Choose","wl.role.coach":"Coach","wl.role.club_admin":"Club admin","wl.role.parent":"Parent","wl.role.swimmer":"Swimmer","wl.role.other":"Something else","wl.band.50":"Up to 50","wl.band.100":"Up to 100","wl.band.200":"Up to 200","wl.band.400":"Up to 400","wl.band.more":"More than 400","wl.tool.hytek":"Hy-Tek Team Manager","wl.tool.teamunify":"TeamUnify","wl.tool.swimtopia":"SwimTopia","wl.tool.spreadsheet":"Spreadsheets","wl.tool.paper":"Paper","wl.tool.other":"Something else","wl.consent":"I'd like AquaticsFlow to email me about the launch and my invitation. I can ask to be removed at any time.","wl.consentError":"Tick the box so we can email you your invitation.","wl.genericError":"Something went wrong. Please try again in a moment.","wl.thanksTitle":"You're on the list","wl.thanksBody":"Thank you. We've sent a confirmation to your email, and we'll write again on launch day with your invitation.","wl.privacyNote":"We only use this to contact you about AquaticsFlow, and delete it 6 months after launch.","wl.privacyLink":"Privacy policy","nav.waitlist":"Join the waitlist","legal.eyebrow":"Legal","legal.updated":"Last updated {date}","legal.contact":"Questions or requests:","legal.privacyDesc":"What AquaticsFlow holds about swimmers, families and coaches, who can see it, and your rights."},"pt":{"wl.metaTitle":"Lista de espera","wl.metaDesc":"O AquaticsFlow abre aos clubes em breve. Entra na lista de espera para teres acesso primeiro e um preço de fundador.","wl.eyebrow":"Abre em breve","wl.title":"Sê um dos primeiros clubes no AquaticsFlow","wl.body":"Vamos abrir aos clubes dentro de algumas semanas. Entra na lista e deixamos-te entrar primeiro, com um preço de fundador, e perguntamos-te o que gostarias que construíssemos a seguir.","wl.perk1.title":"Os primeiros no dia do lançamento","wl.perk1.body":"Recebes o teu convite antes de toda a gente, com os 30 dias de teste grátis prontos a começar.","wl.perk2.title":"Um preço de fundador","wl.perk2.body":"Os clubes da lista pagam menos no primeiro ano. Enviamos os detalhes com o teu convite.","wl.perk3.title":"Uma palavra a dizer no que vem a seguir","wl.perk3.body":"Os clubes fundadores dizem-nos do que precisam, e isso orienta o que construímos.","wl.name":"O teu nome","wl.email":"Email","wl.role":"És","wl.club":"Clube","wl.country":"País","wl.band":"Nadadores ativos","wl.tool":"O que usas hoje?","wl.optional":"opcional","wl.choose":"Escolher","wl.role.coach":"Treinador","wl.role.club_admin":"Administrador do clube","wl.role.parent":"Encarregado de educação","wl.role.swimmer":"Nadador","wl.role.other":"Outro","wl.band.50":"Até 50","wl.band.100":"Até 100","wl.band.200":"Até 200","wl.band.400":"Até 400","wl.band.more":"Mais de 400","wl.tool.hytek":"Hy-Tek Team Manager","wl.tool.teamunify":"TeamUnify","wl.tool.swimtopia":"SwimTopia","wl.tool.spreadsheet":"Folhas de cálculo","wl.tool.paper":"Papel","wl.tool.other":"Outro","wl.consent":"Quero que o AquaticsFlow me envie emails sobre o lançamento e o meu convite. Posso pedir para sair a qualquer momento.","wl.consentError":"Marca a caixa para te podermos enviar o convite por email.","wl.genericError":"Algo correu mal. Tenta novamente daqui a pouco.","wl.thanksTitle":"Estás na lista","wl.thanksBody":"Obrigado. Enviámos uma confirmação para o teu email e voltamos a escrever no dia do lançamento com o teu convite.","wl.privacyNote":"Só usamos isto para te contactar sobre o AquaticsFlow e apagamos tudo 6 meses depois do lançamento.","wl.privacyLink":"Política de privacidade","nav.waitlist":"Entrar na lista de espera","legal.eyebrow":"Informação legal","legal.updated":"Última atualização: {date}","legal.contact":"Perguntas ou pedidos:","legal.privacyDesc":"Que dados a AquaticsFlow guarda sobre nadadores, famílias e treinadores, quem os pode ver e quais são os teus direitos."},"fr":{"wl.metaTitle":"Liste d'attente","wl.metaDesc":"AquaticsFlow ouvre bientôt aux clubs. Rejoignez la liste d'attente pour un accès prioritaire et un tarif fondateur.","wl.eyebrow":"Ouverture prochaine","wl.title":"Soyez parmi les premiers clubs sur AquaticsFlow","wl.body":"Nous ouvrons aux clubs dans quelques semaines. Rejoignez la liste : vous entrerez en premier, avec un tarif fondateur, et nous vous demanderons ce que vous aimeriez voir ensuite.","wl.perk1.title":"Les premiers le jour du lancement","wl.perk1.body":"Vous recevez votre invitation avant tout le monde, avec vos 30 jours d'essai gratuit prêts à démarrer.","wl.perk2.title":"Un tarif fondateur","wl.perk2.body":"Les clubs de la liste paient moins cher la première année. Nous vous enverrons les détails avec votre invitation.","wl.perk3.title":"Votre mot à dire sur la suite","wl.perk3.body":"Les clubs fondateurs nous disent ce dont ils ont besoin, et cela oriente ce que nous construisons.","wl.name":"Votre nom","wl.email":"E-mail","wl.role":"Vous êtes","wl.club":"Club","wl.country":"Pays","wl.band":"Nageurs actifs","wl.tool":"Qu'utilisez-vous aujourd'hui ?","wl.optional":"facultatif","wl.choose":"Choisir","wl.role.coach":"Entraîneur","wl.role.club_admin":"Administrateur du club","wl.role.parent":"Parent","wl.role.swimmer":"Nageur","wl.role.other":"Autre","wl.band.50":"Jusqu'à 50","wl.band.100":"Jusqu'à 100","wl.band.200":"Jusqu'à 200","wl.band.400":"Jusqu'à 400","wl.band.more":"Plus de 400","wl.tool.hytek":"Hy-Tek Team Manager","wl.tool.teamunify":"TeamUnify","wl.tool.swimtopia":"SwimTopia","wl.tool.spreadsheet":"Tableurs","wl.tool.paper":"Papier","wl.tool.other":"Autre","wl.consent":"J'accepte qu'AquaticsFlow m'écrive au sujet du lancement et de mon invitation. Je peux demander à être retiré de la liste à tout moment.","wl.consentError":"Cochez la case pour que nous puissions vous envoyer votre invitation.","wl.genericError":"Une erreur s'est produite. Réessayez dans un instant.","wl.thanksTitle":"Vous êtes sur la liste","wl.thanksBody":"Merci. Nous vous avons envoyé une confirmation par e-mail et nous vous écrirons le jour du lancement avec votre invitation.","wl.privacyNote":"Nous les utilisons uniquement pour vous contacter au sujet d'AquaticsFlow, et les supprimons 6 mois après le lancement.","wl.privacyLink":"Politique de confidentialité","nav.waitlist":"Rejoindre la liste d'attente","legal.eyebrow":"Informations légales","legal.updated":"Dernière mise à jour : {date}","legal.contact":"Questions ou demandes :","legal.privacyDesc":"Ce qu'AquaticsFlow conserve sur les nageurs, les familles et les entraîneurs, qui peut le voir, et vos droits."}};
+
+const LANGS = ["en","pt","fr"];
+function pickLang() {
+  const q = new URLSearchParams(location.search).get("lang");
+  if (LANGS.includes(q)) return q;
+  try { const s = localStorage.getItem("af_lang"); if (LANGS.includes(s)) return s; } catch (e) {}
+  for (const l of navigator.languages || [navigator.language || "en"]) {
+    const b = String(l).slice(0, 2).toLowerCase();
+    if (LANGS.includes(b)) return b;
+  }
+  return "en";
+}
+function wireLangs(apply) {
+  let current = pickLang();
+  const set = (l) => {
+    current = l;
+    document.documentElement.lang = l === "pt" ? "pt-PT" : l;
+    document.querySelectorAll(".langs button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === l)));
+    try { localStorage.setItem("af_lang", l); } catch (e) {}
+    apply(l);
+  };
+  document.querySelectorAll(".langs button").forEach((b) => b.addEventListener("click", () => set(b.dataset.lang)));
+  set(current);
+  return () => current;
+}
+
+const getLang = wireLangs((l) => {
+  document.querySelectorAll("[data-t]").forEach((el) => { el.textContent = (el.dataset.pre || "") + T[l][el.dataset.t]; });
+  document.title = T[l]["wl.metaTitle"] + " · AquaticsFlow";
+});
+
+// ?src=ig (etc.) is stored with the sign-up so channels can be compared. Our own field, not a tracker.
+const rawSrc = new URLSearchParams(location.search).get("src") || "";
+const SRC = /^[a-z0-9_-]{1,32}$/i.test(rawSrc) ? rawSrc.toLowerCase() : null;
+const ROLES = ["coach","club_admin","parent","swimmer","other"], BANDS = ["50","100","200","400","more"], TOOLS = ["hytek","teamunify","swimtopia","spreadsheet","paper","other"];
+
+const form = document.getElementById("wl"), err = document.getElementById("wl-err"), btn = form.querySelector("button.go");
+const show = (msg) => { err.textContent = msg; err.hidden = !msg; };
+const done = () => { form.hidden = true; document.getElementById("wl-thanks").hidden = false; };
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const l = getLang(), d = new FormData(form), v = (k) => String(d.get(k) || "").trim();
+  show("");
+  if (v("website")) return done();                      // honeypot: a bot is told it worked, nothing is stored
+  if (!form.reportValidity()) return;
+  if (!d.get("consent")) return show(T[l]["wl.consentError"]);
+  btn.disabled = true;
+  try {
+    const res = await fetch("https://mcggpfofzbdjhnygkday.supabase.co/rest/v1/rpc/join_waitlist", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", apikey: "sb_publishable_4gpPHf9CR0m2HKDXb5dX4w_Qyh34PKM", Authorization: "Bearer " + "sb_publishable_4gpPHf9CR0m2HKDXb5dX4w_Qyh34PKM" },
+      body: JSON.stringify({
+        p_email: v("email"), p_name: v("name"),
+        p_role: ROLES.includes(v("role")) ? v("role") : "other",
+        p_club_name: v("club") || null, p_country: v("country") || null,
+        p_band: BANDS.includes(v("band")) ? v("band") : null,
+        p_tool: TOOLS.includes(v("tool")) ? v("tool") : null,
+        p_language: l, p_source: SRC, p_consent: true,
+      }),
+    });
+    if (res.ok) return done();
+    // The database's own refusals (a bad email, too many sign-ups at once) are sentences written for people.
+    const body = await res.json().catch(() => ({}));
+    show(body && (body.code === "22023" || body.code === "54000") && body.message ? body.message : T[l]["wl.genericError"]);
+  } catch (e2) {
+    show(T[getLang()]["wl.genericError"]);
+  } finally {
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
