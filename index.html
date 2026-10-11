@@ -38,7 +38,10 @@ body {
 a { color: inherit; }
 .wrap { max-width: 1120px; margin: 0 auto; }
 header { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 22px; }
-header img { height: 30px; width: auto; display: block; }
+header .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+header .mark { width: 44px; height: 44px; border-radius: 12px; display: block; box-shadow: 0 8px 24px -8px rgba(32, 56, 248, 0.6), 0 0 0 1px rgba(148, 212, 255, 0.14); }
+header .word { height: 28px; width: auto; display: block; }
+@media (max-width: 380px) { header .mark { width: 38px; height: 38px; border-radius: 10px; } header .word { height: 24px; } }
 .langs { display: flex; gap: 2px; font-size: 13px; font-weight: 700; }
 .langs button { all: unset; cursor: pointer; padding: 10px 9px; color: var(--ink3); border-radius: 8px; }
 .langs button[aria-pressed="true"] { color: var(--ink); }
@@ -92,7 +95,7 @@ button.go[disabled] .spin { display: inline-block; }
 </head>
 <body>
 <header class="wrap">
-  <a href="https://aquaticsflow.com" aria-label="AquaticsFlow"><img src="/assets/wordmark.png" alt="AquaticsFlow" width="167" height="30"></a>
+  <a class="brand" href="https://aquaticsflow.com" aria-label="AquaticsFlow"><img class="mark" src="/assets/icon-192.png" alt="" width="44" height="44"><img class="word" src="/assets/wordmark.png" alt="AquaticsFlow" width="167" height="30"></a>
   <nav class="langs" aria-label="Language"><button type="button" data-lang="en">EN</button><button type="button" data-lang="pt">PT</button><button type="button" data-lang="fr">FR</button></nav>
 </header>
 <main class="wrap grid">
